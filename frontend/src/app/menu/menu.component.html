@@ -1,0 +1,17 @@
+<mat-toolbar class="menu">
+  <mat-icon aria-hidden="false" aria-label="event">event</mat-icon>
+
+  <span class="spacer"></span>
+  <ul>
+    <mat-icon *ngIf="!auth.loginOn()" aria-hidden="false" aria-label="account_circle">account_circle</mat-icon>
+    <a *ngIf="!auth.loginOn()" routerLink="login">Login</a>
+  </ul>
+  <ul>
+    <mat-icon *ngIf="!auth.loginOn()" aria-hidden="false" aria-label="account_box">account_box</mat-icon>
+    <a *ngIf="!auth.loginOn()" routerLink="registro">Registro</a>
+  </ul>
+  <ul>
+    <mat-icon *ngIf="auth.loginOn()" aria-hidden="false" aria-label="login">login</mat-icon>
+    <a *ngIf="auth.loginOn()" mat-button (click)="auth.cerrarSesion()">Cerrar sesion</a>
+  </ul>
+</mat-toolbar>
