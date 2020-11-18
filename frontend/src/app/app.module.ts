@@ -20,6 +20,7 @@ import {AuthService} from './service/auth.service';
 import {AuthGuard} from './guard/auth.guard';
 import { TokenInterceptorService } from './service/token-interceptor.service';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MenuComponent,
     LoginComponent,
     RegistroComponent,
-    PagprincipalComponent
+    PagprincipalComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

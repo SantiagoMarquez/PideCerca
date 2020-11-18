@@ -1,17 +1,31 @@
-<mat-toolbar class="menu">
-  <mat-icon aria-hidden="false" aria-label="event">event</mat-icon>
-
+<mat-toolbar class="menu bg-blue ">
+  <a class="navbar-brand" href="#"><img class="" src="../../assets/images/logo.png" alt="logo-pide-cerca"></a>
+  <ul>
+    <div *ngIf="auth.loginOn()" class="navbar-item mx-3 border rounded border-success text-center">
+      <mat-icon aria-hidden="false" aria-label="event" class="icon">event</mat-icon>
+      <a *ngIf="auth.loginOn()" routerLink="pagprincipal" class="tit">Home</a>
+    </div>
+  </ul>
+  <span class="spacerIcon"></span>
   <span class="spacer"></span>
   <ul>
-    <mat-icon *ngIf="!auth.loginOn()" aria-hidden="false" aria-label="account_circle">account_circle</mat-icon>
-    <a *ngIf="!auth.loginOn()" routerLink="login">Login</a>
+    <div *ngIf="!auth.loginOn()" class="navbar-item mx-3 border rounded border-success text-center">
+      <mat-icon *ngIf="!auth.loginOn()" aria-hidden="false" aria-label="account_circle" class="icon">
+        account_circle</mat-icon>
+      <a *ngIf="!auth.loginOn()" routerLink="login" class="tit">Login</a>
+    </div>
   </ul>
   <ul>
-    <mat-icon *ngIf="!auth.loginOn()" aria-hidden="false" aria-label="account_box">account_box</mat-icon>
-    <a *ngIf="!auth.loginOn()" routerLink="registro">Registro</a>
+    <div *ngIf="!auth.loginOn()" class="navbar-item mx-3 border rounded border-success text-center">
+      <mat-icon *ngIf="!auth.loginOn()" aria-hidden="false" aria-label="account_box" class="icon">
+        account_box</mat-icon>
+      <a *ngIf="!auth.loginOn()" routerLink="registro" class="tit">Registro</a>
+    </div>
   </ul>
   <ul>
-    <mat-icon *ngIf="auth.loginOn()" aria-hidden="false" aria-label="login">login</mat-icon>
-    <a *ngIf="auth.loginOn()" mat-button (click)="auth.cerrarSesion()">Cerrar sesion</a>
+    <div *ngIf="auth.loginOn()" class="navbar-item mx-3 border rounded border-success text-center">
+      <mat-icon *ngIf="auth.loginOn()" aria-hidden="false" aria-label="login" class="icon">login</mat-icon>
+      <a *ngIf="auth.loginOn()" mat-button (click)="auth.cerrarSesion()" class="tit">Cerrar sesion</a>
+    </div>
   </ul>
 </mat-toolbar>
