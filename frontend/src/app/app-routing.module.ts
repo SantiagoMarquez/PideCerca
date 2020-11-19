@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { from } from 'rxjs';
 import { LoginComponent } from './login/login.component';
 import { PagprincipalComponent } from './pagprincipal/pagprincipal.component';
 import { RegistroComponent } from './registro/registro.component';
+import { MapComponent} from './map/map.component';
 
 
 
@@ -24,6 +26,10 @@ const routes: Routes = [
     path: 'registro',
     component: RegistroComponent,
   },
+  {
+    path: 'mapa',
+    component:MapComponent,
+  }
 
 ];
 
