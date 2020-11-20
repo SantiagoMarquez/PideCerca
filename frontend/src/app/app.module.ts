@@ -24,6 +24,8 @@ import { FooterComponent } from './footer/footer.component';
 import { MapComponent } from './map/map.component';
 import { LeafletModule} from '@asymmetrik/ngx-leaflet';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
