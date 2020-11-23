@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { latLng, MapOptions, tileLayer } from 'leaflet';
+import { UbicacionService } from '../service/ubicacion.service';
 
 @Component({
   selector: 'app-map',
@@ -11,28 +12,16 @@ export class MapComponent implements OnInit {
   lat: number;
   lng: number;
 
-  constructor() {}
-
-
+  constructor(private Ubicacion: UbicacionService) {}
 
   ngOnInit(): void {
     this.traerUbicacion();
-    this.initializeMapOptions();
-  }
-
-  traerUbicacion() {
-    navigator.geolocation.getCurrentPosition((position: Position) => {
-      if (position) {
-        this.lat = position.coords.latitude;
-        this.lng = position.coords.longitude;
-        console.log(this.lat,this.lng);
-      }
-    });
   }
 
   private initializeMapOptions() {
+    console.log('esto es lo que llega en el mapa ' + this.lat + ' ' + this.lng);
     this.mapOptions = {
-      center: latLng(4.6269002,-74.1498029 ),
+      center: latLng(this.lat, this.lng),
       zoom: 12,
       layers: [
         tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -41,5 +30,28 @@ export class MapComponent implements OnInit {
         }),
       ],
     };
+    
   }
+
+  traerUbicacion() {
+    this.Ubicacion.obtenerUbicacion()
+      .then((pos) => {
+        this.lat = pos.lat;
+        this.lng = pos.lng;
+        console.log(this.lat, this.lng);
+        this.initializeMapOptions();
+      })
+      .catch((err) => alert('por favor habilitar obtener ubicacion'));
+  }
+
+  // se comenta para probar por medio de un service
+  /*  traerUbicacion() {
+    navigator.geolocation.getCurrentPosition((position: Position) => {
+      if (position) {
+        this.lat = position.coords.latitude;
+        this.lng = position.coords.longitude;
+        console.log(this.lat,this.lng);
+      }
+    });
+  } */
 }

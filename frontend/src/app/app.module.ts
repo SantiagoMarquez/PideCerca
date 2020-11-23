@@ -23,6 +23,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { FooterComponent } from './footer/footer.component';
 import { MapComponent } from './map/map.component';
 import { LeafletModule} from '@asymmetrik/ngx-leaflet';
+import { UbicacionService } from './service/ubicacion.service';
 
 
 
@@ -55,6 +56,7 @@ import { LeafletModule} from '@asymmetrik/ngx-leaflet';
   providers: [
     AuthService,
     AuthGuard,
+    UbicacionService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptorService,
