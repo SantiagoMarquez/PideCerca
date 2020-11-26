@@ -5,7 +5,6 @@ import { PagprincipalComponent } from './pagprincipal/pagprincipal.component';
 import { RegistroComponent } from './registro/registro.component';
 import { TiendasComponent } from './tienda/tiendas/tiendas.component';
 import { MapComponent } from './map/map.component';
-
 import { ContactanosComponent } from './contactanos/contactanos.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { PerfilComponent } from './perfil/perfil.component';
@@ -33,6 +32,7 @@ const routes: Routes = [
   {
     path: 'tiendas',
     component: TiendasComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'contactanos',
@@ -55,6 +55,7 @@ const routes: Routes = [
   {
     path: 'mapa',
     component: MapComponent,
+    canActivate: [AuthGuard],
   },
 ];
 
