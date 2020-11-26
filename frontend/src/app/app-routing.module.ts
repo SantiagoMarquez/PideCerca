@@ -5,7 +5,11 @@ import { PagprincipalComponent } from './pagprincipal/pagprincipal.component';
 import { RegistroComponent } from './registro/registro.component';
 import { TiendasComponent } from './tienda/tiendas/tiendas.component';
 
-
+import { ContactanosComponent } from './contactanos/contactanos.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { AuthGuard } from './guard/auth.guard';
+import { EditarComponent } from './editar/editar.component';
 
 const routes: Routes = [
   {
@@ -29,10 +33,28 @@ const routes: Routes = [
     path: 'tiendas',
     component: TiendasComponent,
   },
+  {
+    path: 'contactanos',
+    component: ContactanosComponent,
+  },
+  {
+    path: 'aboutUs',
+    component: AboutUsComponent,
+  },
+  {
+    path: 'perfil',
+    component: PerfilComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'editar',
+    component: EditarComponent,
+    canActivate: [AuthGuard],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

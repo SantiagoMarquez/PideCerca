@@ -1,35 +1,37 @@
-<div class="form">
-  <mat-card class="card">
-    <mat-card-title> Registrar usuario </mat-card-title>
-    <mat-card-content>
-      <div class="container">
-        <mat-form-field>
-          <input [(ngModel)]="registrarUsuario.nombre" matInput placeholder="Nombre" />
-        </mat-form-field>
-        <mat-form-field>
-          <input [(ngModel)]="registrarUsuario.cedula" matInput placeholder="Cedula" />
-        </mat-form-field>
-        <mat-form-field>
-          <input [(ngModel)]="registrarUsuario.edad" matInput placeholder="Edad" />
-        </mat-form-field>
-        <mat-form-field>
-          <input [(ngModel)]="registrarUsuario.telefono" matInput placeholder="Telefono" />
-        </mat-form-field>
-        <mat-form-field>
-          <input [(ngModel)]="registrarUsuario.rol" matInput placeholder="Rol" />
-        </mat-form-field>
-        <mat-form-field>
-          <input [(ngModel)]="registrarUsuario.correo" matInput placeholder="Correo" />
-        </mat-form-field>
-        <mat-form-field>
-          <input [(ngModel)]="registrarUsuario.password" matInput placeholder="Contrasena" />
-        </mat-form-field>
-      </div>
-    </mat-card-content>
-    <mat-card-actions>
-      <button (click)="registrar()" class="button col" mat-raised-button>
-        Registrar
-      </button>
-    </mat-card-actions>
-  </mat-card>
+<div class="vh-100">
+  <div class="form" style="margin-top: 80px;">
+    <mat-card class="card">
+      <mat-card-title> Registrar usuario </mat-card-title>
+      <mat-card-content>
+        <div class="container">
+          <mat-form-field>
+            <input [(ngModel)]="registrarUsuario.nombre" matInput placeholder="Nombre" />
+          </mat-form-field>
+          <mat-form-field>
+            <input [(ngModel)]="registrarUsuario.cedula" matInput placeholder="Cedula" />
+          </mat-form-field>
+          <mat-form-field>
+            <input [(ngModel)]="registrarUsuario.edad" matInput placeholder="Edad" />
+          </mat-form-field>
+          <mat-form-field>
+            <input [(ngModel)]="registrarUsuario.telefono" matInput placeholder="Telefono" />
+          </mat-form-field>
+          <mat-form-field>
+            <input [(ngModel)]="registrarUsuario.direccion" matInput placeholder="Direccion" />
+          </mat-form-field>
+          <mat-form-field>
+            <input [(ngModel)]="registrarUsuario.correo" matInput placeholder="Correo" />
+          </mat-form-field>
+          <mat-form-field>
+            <input [(ngModel)]="registrarUsuario.password" matInput placeholder="Contrasena" />
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button (click)="registrar()" class="button bg-green" mat-raised-button>
+          Registrar
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
 </div>

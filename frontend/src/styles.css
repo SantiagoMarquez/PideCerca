@@ -1,18 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
 :root {
   --principal: #031D44;
   --secundario: #FFD51F;
   --secundario1: #B8C33B;
-  --texto: Montserrat;
+  --texto: Roboto;
 }
 
-/* @font-face {
-  font-family: 'Montserrat', sans-serif;
-  src: url(../fuentes/Montserrat-Regular.ttf);
-} */
-
-.navbar-item:hover {
-  transform: scale(1.5);
-}
 
 .bg-blue {
   background-color: var(--principal);

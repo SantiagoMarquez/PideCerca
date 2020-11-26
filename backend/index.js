@@ -16,6 +16,7 @@ app.use(express.json());
 app.use("/api/usuario/", usuario);
 app.use("/api/auth/", auth);
 app.use("/api/tienda/", tienda);
+app.use("/public", express.static("public"));
 
 //Puerto de conexion
 const port = process.env.PORT || 3000;
