@@ -27,6 +27,11 @@ import { ContactanosComponent } from './contactanos/contactanos.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { EditarComponent } from './editar/editar.component';
+import { MapComponent } from './map/map.component';
+import { LeafletModule} from '@asymmetrik/ngx-leaflet';
+import { UbicacionService } from './service/ubicacion.service';
+
+
 
 @NgModule({
   declarations: [
@@ -41,6 +46,8 @@ import { EditarComponent } from './editar/editar.component';
     AboutUsComponent,
     PerfilComponent,
     EditarComponent,
+    FooterComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,11 +63,13 @@ import { EditarComponent } from './editar/editar.component';
     HttpClientModule,
     ReactiveFormsModule,
     MatExpansionModule,
+    LeafletModule,
   ],
   providers: [
     AuthService,
     TiendaService,
     AuthGuard,
+    UbicacionService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptorService,

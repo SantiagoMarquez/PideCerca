@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { PagprincipalComponent } from './pagprincipal/pagprincipal.component';
 import { RegistroComponent } from './registro/registro.component';
 import { TiendasComponent } from './tienda/tiendas/tiendas.component';
+import { MapComponent } from './map/map.component';
 
 import { ContactanosComponent } from './contactanos/contactanos.component';
 import { AboutUsComponent } from './about-us/about-us.component';
@@ -50,6 +51,10 @@ const routes: Routes = [
     path: 'editar',
     component: EditarComponent,
     canActivate: [AuthGuard],
+  },
+  {
+    path: 'mapa',
+    component: MapComponent,
   },
 ];
 

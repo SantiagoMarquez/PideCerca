@@ -1,0 +1,46 @@
+{
+    "tiendas":[
+        {
+            "nombre":"Hambur Store",
+            "categoria":"Comidas Rapidas",
+            "descripcion":"Esta es la descripcion, ... etc",
+            "longitud" : -74.14633253615051,
+            "latitud": 4.626549537195824
+        },
+        {
+            "nombre":"Carbon Ahumado",
+            "categoria":"Comidas Rapidas",
+            "descripcion":"Esta es la descripcion, ... etc",
+            "longitud" : -74.14707622772323,
+            "latitud": 4.625949940650387
+        },
+        {
+            "nombre":"Sin sazon y sin sal",
+            "categoria":"Comidas Rapidas",
+            "descripcion":"Esta es la descripcion, ... etc",
+            "longitud" : -74.14640287114717,
+            "latitud": 4.625250516365267
+        },
+        {
+            "nombre":"Chaza Tintos y empanadas",
+            "categoria":"Bebidas calientes",
+            "descripcion":"Esta es la descripcion, ... etc",
+            "longitud" : -74.14705017412403,
+            "latitud": 4.626549537195824
+        },
+        {
+            "nombre":"Panaderia solo azucar",
+            "categoria":"Panaderia",
+            "descripcion":"Esta es la descripcion, ... etc",
+            "longitud" : -74.14671462212229,
+            "latitud": 4.62665261126182
+        },
+        {
+            "nombre":"Drogueria acetaminofen ",
+            "categoria":"Drogueria",
+            "descripcion":"Esta es la descripcion, ... etc",
+            "longitud" : -74.14640287114717,
+            "latitud": 4.626291692862879
+        }
+    ]
+}
