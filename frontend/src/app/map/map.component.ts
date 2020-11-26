@@ -2,7 +2,8 @@ import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { latLng, MapOptions, tileLayer, icon } from 'leaflet';
 import * as Leaflet from 'leaflet';
 import { UbicacionService } from '../service/ubicacion.service';
-
+import {AuthService} from '../service/auth.service';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -18,7 +19,7 @@ export class MapComponent implements OnInit, OnDestroy, AfterViewInit {
   public center;
   mapOptions: MapOptions;
 
-  constructor(public ubicacionService: UbicacionService) {}
+  constructor(public ubicacionService: UbicacionService, private auth: AuthService, private router: Router) {}
 
   ngOnInit(): void {
     this.traerUbicacion();
