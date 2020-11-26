@@ -6,6 +6,7 @@ const cors = require("cors");
 //Modulos internos
 const usuario = require("./routes/usuario");
 const auth = require("./routes/auth");
+const tienda = require("./routes/tienda");
 
 
 //App
@@ -14,6 +15,7 @@ app.use(cors());
 app.use(express.json());
 app.use("/api/usuario/", usuario);
 app.use("/api/auth/", auth);
+app.use("/api/tienda/", tienda);
 
 //Puerto de conexion
 const port = process.env.PORT || 3000;

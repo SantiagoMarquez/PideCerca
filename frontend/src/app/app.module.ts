@@ -20,6 +20,8 @@ import {AuthService} from './service/auth.service';
 import {AuthGuard} from './guard/auth.guard';
 import { TokenInterceptorService } from './service/token-interceptor.service';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { TiendaService } from './service/tienda.service';
+import { TiendasComponent } from './tienda/tiendas/tiendas.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MenuComponent,
     LoginComponent,
     RegistroComponent,
-    PagprincipalComponent
+    PagprincipalComponent,
+    TiendasComponent
   ],
   imports: [
     BrowserModule,
@@ -46,6 +49,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
   ],
   providers: [
     AuthService,
+    TiendaService,
     AuthGuard,
     {
       provide: HTTP_INTERCEPTORS, 

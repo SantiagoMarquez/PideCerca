@@ -1,7 +1,11 @@
 <mat-toolbar class="menu">
   <mat-icon aria-hidden="false" aria-label="event">event</mat-icon>
 
-  <span class="spacer"></span>
+  <span class="spacer"></span>  
+  <ul>
+    <mat-icon aria-hidden="false" aria-label="shopping_bag">shopping_bag</mat-icon>
+    <a  routerLink="tiendas" >tiendas</a>
+  </ul>
   <ul>
     <mat-icon *ngIf="!auth.loginOn()" aria-hidden="false" aria-label="account_circle">account_circle</mat-icon>
     <a *ngIf="!auth.loginOn()" routerLink="login">Login</a>
