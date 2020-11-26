@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { PagprincipalComponent } from './pagprincipal/pagprincipal.component';
 import { RegistroComponent } from './registro/registro.component';
 import { TiendasComponent } from './tienda/tiendas/tiendas.component';
+import { ProductosComponent } from './producto/productos/productos.component';
 import { MapComponent } from './map/map.component';
 
 import { ContactanosComponent } from './contactanos/contactanos.component';
@@ -55,6 +56,10 @@ const routes: Routes = [
   {
     path: 'mapa',
     component: MapComponent,
+  },
+  {
+    path: 'producto',
+    component: ProductosComponent,
   },
 ];
 

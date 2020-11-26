@@ -21,6 +21,7 @@ import { AuthGuard } from './guard/auth.guard';
 import { TokenInterceptorService } from './service/token-interceptor.service';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { TiendaService } from './service/tienda.service';
+import { ProductoService } from './service/producto.service';
 import { TiendasComponent } from './tienda/tiendas/tiendas.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactanosComponent } from './contactanos/contactanos.component';
@@ -30,6 +31,7 @@ import { EditarComponent } from './editar/editar.component';
 import { MapComponent } from './map/map.component';
 import { LeafletModule} from '@asymmetrik/ngx-leaflet';
 import { UbicacionService } from './service/ubicacion.service';
+import { ProductosComponent } from './producto/productos/productos.component';
 
 
 
@@ -48,6 +50,7 @@ import { UbicacionService } from './service/ubicacion.service';
     EditarComponent,
     FooterComponent,
     MapComponent,
+    ProductosComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,6 +71,7 @@ import { UbicacionService } from './service/ubicacion.service';
   providers: [
     AuthService,
     TiendaService,
+    ProductoService,
     AuthGuard,
     UbicacionService,
     {
