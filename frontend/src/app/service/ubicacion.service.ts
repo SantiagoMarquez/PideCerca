@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 export class UbicacionService {
   constructor() {}
 
-  obtenerUbicacion(): Promise<any> {
+ obtenerUbicacion(): Promise<any> {
     return new Promise((resolve, reject) => {
       navigator.geolocation.getCurrentPosition(
         (resp) => {
