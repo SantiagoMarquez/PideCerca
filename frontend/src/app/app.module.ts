@@ -21,6 +21,11 @@ import {AuthGuard} from './guard/auth.guard';
 import { TokenInterceptorService } from './service/token-interceptor.service';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { FooterComponent } from './footer/footer.component';
+import { ContactanosComponent } from './contactanos/contactanos.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { EditarComponent } from './editar/editar.component';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +34,11 @@ import { FooterComponent } from './footer/footer.component';
     LoginComponent,
     RegistroComponent,
     PagprincipalComponent,
-    FooterComponent
+    FooterComponent,
+    ContactanosComponent,
+    AboutUsComponent,
+    PerfilComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,

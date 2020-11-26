@@ -3,8 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { PagprincipalComponent } from './pagprincipal/pagprincipal.component';
 import { RegistroComponent } from './registro/registro.component';
-
-
+import { ContactanosComponent } from './contactanos/contactanos.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { AuthGuard } from './guard/auth.guard';
+import { EditarComponent } from './editar/editar.component';
 
 const routes: Routes = [
   {
@@ -24,7 +27,24 @@ const routes: Routes = [
     path: 'registro',
     component: RegistroComponent,
   },
-
+  {
+      path: 'contactanos',
+      component: ContactanosComponent,
+    },
+  {
+      path: 'aboutUs',
+      component: AboutUsComponent,
+    },
+  {
+    path: 'perfil',
+    component: PerfilComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'editar',
+    component: EditarComponent,
+    canActivate: [AuthGuard],
+  },
 ];
 
 @NgModule({

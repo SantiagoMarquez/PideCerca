@@ -8,9 +8,10 @@ const esquemaUsuario = new mongoose.Schema({
   cedula:String,
   edad:Number,
   telefono:String,
-  rol:String,
+  direccion:String,
   correo:String,
   password:String,
+  foto:String,
   fechaRegistro:{
     type:Date,
     default:Date.now,

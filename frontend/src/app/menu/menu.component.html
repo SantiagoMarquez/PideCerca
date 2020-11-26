@@ -29,4 +29,20 @@
       <a *ngIf="auth.loginOn()" mat-button (click)="auth.cerrarSesion()" class="tit">Cerrar sesion</a>
     </div>
   </ul>
+  <ul>
+    <div *ngIf="auth.loginOn()" class="navbar-item mx-3 border rounded border-success text-center">
+      <mat-icon *ngIf="auth.loginOn()" aria-hidden="false" aria-label="account_circle" class="icon">account_circle
+      </mat-icon>
+      <a *ngIf="auth.loginOn()" routerLink="perfil" data-toggle="modal" data-target="#profileModal"
+        class="tit">Perfil</a>
+    </div>
+  </ul>
+  <ul>
+    <div *ngIf="auth.loginOn()" class="navbar-item mx-3 border rounded border-success text-center">
+      <mat-icon *ngIf="auth.loginOn()" aria-hidden="false" aria-label="account_circle" class="icon">account_circle
+      </mat-icon>
+      <a *ngIf="auth.loginOn()" routerLink="editar" data-toggle="modal" data-target="#profileModal"
+        class="tit">Editar</a>
+    </div>
+  </ul>
 </mat-toolbar>

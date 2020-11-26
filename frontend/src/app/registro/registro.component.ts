@@ -2,12 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import {AuthService} from '../service/auth.service';
 import {Router} from '@angular/router';
 
+
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',
   styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent implements OnInit {
+
+  alerta:String='';
 
   constructor(private auth: AuthService, private router: Router) { }
 
@@ -16,10 +19,11 @@ export class RegistroComponent implements OnInit {
     cedula: '',
     edad: '',
     telefono: '',
-    rol: '',
+    direccion: '',
     correo: '',
     password: '',
   }
+
 
   ngOnInit(): void {
   }
