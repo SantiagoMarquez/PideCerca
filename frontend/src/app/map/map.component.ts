@@ -66,7 +66,7 @@ export class MapComponent implements OnInit, OnDestroy, AfterViewInit {
           })
         )
         .bindPopup(tienda.nombre  +`` +
-        `<div>Categoria: ${ tienda.categoria }</div>` +
+        `<div clas="border-danger" >Categoria: ${ tienda.categoria }</div>` +
         `<div>Descripcion: ${ tienda.descripcion}</div>`+
         `<a href="http://localhost:4200/pagprincipal">Ir a la tienda</a>` )
         .openPopup();
