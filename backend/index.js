@@ -7,6 +7,7 @@ const cors = require("cors");
 const usuario = require("./routes/usuario");
 const auth = require("./routes/auth");
 const tienda = require("./routes/tienda");
+const producto = require("./routes/producto");
 
 
 //App
@@ -16,6 +17,7 @@ app.use(express.json());
 app.use("/api/usuario/", usuario);
 app.use("/api/auth/", auth);
 app.use("/api/tienda/", tienda);
+app.use("/api/producto", producto);
 app.use("/public", express.static("public"));
 
 //Puerto de conexion

@@ -8,9 +8,9 @@ const esquemaProducto = new Schema(
 			type: String,
 			required: true,
 		},
-		imageUrl: {
+		descripcion: {
 			type: String,
-			required: true,
+			required: false,
 		},
 		precio: {
 			type: Number,
