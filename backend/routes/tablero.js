@@ -50,18 +50,25 @@ router.post("/cargarArchivo",  cargarArchivo.single("sticker"),   async (req, re
   }
 );
 
+router.get("/lista/:_id",  async (req, res) => {
+  // Buscamos el usuario por id
+
+  const tablero = await Tablero.find(req.params._id)
+   res.send(tablero)
+});   
+
 //Actualizar actividad 
 
-router.put("/",  async (req, res) => {
+router.put("/lista",  async (req, res) => {
    // Buscamos el usuario por id
   
    const tablero = await Tablero.findByIdAndUpdate(
      req.body._id,
      {
-       idUsuario: req.usuario._id,
+       
        nombre: req.body.nombre,
-       descripcion: req.body.descripcion,
-       estado: req.body.estado,
+       precio: req.body.precio,
+       
      },
      {
        new: true,
@@ -72,7 +79,7 @@ router.put("/",  async (req, res) => {
    res.status(200).send(tablero);
  });
  // Eliminar el usuario , traemos un parametro del id de la tarea
- router.delete("/:_id",  async (req, res) => {
+ router.delete("/lista/:_id",  async (req, res) => {
   
    const tablero = await Tablero.findByIdAndDelete(req.params._id);
    if (!tablero)

@@ -27,7 +27,18 @@ export class TableroService {
   listarActividad(){
     return this.http.get<any>(this.listaUrl);
   }
-  
-  
+ 
+  listaActividad(id:string){
+    return this.http.get<any>(`${this.listaUrl}/${id}`);
+  }
 
+  editarActividad(id: string, nombre: string, precio: string) {
+    return this.http.put(`${this.listaUrl}/${id}`, {nombre, precio});
+  }
+  
+  eliminarActividad(id: string) {
+    return this.http.delete(`${this.listaUrl}/${id}`);
+  }
+  
+  
 }

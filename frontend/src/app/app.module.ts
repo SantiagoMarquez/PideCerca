@@ -7,6 +7,7 @@ import { MenuComponent } from './menu/menu.component';
 import { RegistroComponent } from './registro/registro.component';
 import { CrearComponent } from './tablero/crear/crear.component';
 import { ListarComponent } from './tablero/listar/listar.component';
+import { ActualizarComponent } from './tablero/actualizar/actualizar.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ListarComponent } from './tablero/listar/listar.component';
     MenuComponent,
     RegistroComponent,
     CrearComponent,
-    ListarComponent
+    ListarComponent,
+    ActualizarComponent
   ],
   imports: [
     BrowserModule,
