@@ -3,44 +3,134 @@
         {
             "nombre":"Hambur Store",
             "categoria":"Comidas Rapidas",
-            "descripcion":"Esta es la descripcion, ... etc",
+            "descripcion":"Las mejores hamburguesas al carbon",
+            "foto":"../../assets/images/Tienda1.jpg",
             "longitud" : -74.14633253615051,
             "latitud": 4.626549537195824
         },
         {
             "nombre":"Carbon Ahumado",
             "categoria":"Comidas Rapidas",
-            "descripcion":"Esta es la descripcion, ... etc",
+            "descripcion":"Comidas rapidas al carbon",
+            "foto":"../../assets/images/Tienda3.jpg",
             "longitud" : -74.14707622772323,
             "latitud": 4.625949940650387
         },
         {
             "nombre":"Sin sazon y sin sal",
-            "categoria":"Comidas Rapidas",
-            "descripcion":"Esta es la descripcion, ... etc",
+            "categoria":"Restaurantes",
+            "descripcion":"Comida baja de todo",
+            "foto":"../../assets/images/Miscelania1.jpg",
             "longitud" : -74.14640287114717,
             "latitud": 4.625250516365267
         },
         {
             "nombre":"Chaza Tintos y empanadas",
             "categoria":"Bebidas calientes",
-            "descripcion":"Esta es la descripcion, ... etc",
+            "descripcion":"cafe tinto aromatica",
+            "foto":"../../assets/images/Tienda2.jpg",
             "longitud" : -74.14705017412403,
             "latitud": 4.626549537195824
         },
         {
             "nombre":"Panaderia solo azucar",
             "categoria":"Panaderia",
-            "descripcion":"Esta es la descripcion, ... etc",
+            "descripcion":"Pasabocas y demas",
+            "foto":"../../assets/images/tendero.jpeg",
             "longitud" : -74.14671462212229,
             "latitud": 4.62665261126182
         },
         {
             "nombre":"Drogueria acetaminofen ",
             "categoria":"Drogueria",
-            "descripcion":"Esta es la descripcion, ... etc",
+            "descripcion":"Medicamentos y accesrios de belleza",
+            "foto":"../../assets/images/Drogueria2.jpg",
             "longitud" : -74.14640287114717,
             "latitud": 4.626291692862879
+        },
+
+
+       
+        {
+            "nombre":" Restaurante Maluko",
+            "categoria":"Restaurante",
+            "descripcion":"Diferentes menus y deliciosos platos",
+            "foto":"../../assets/images/tiendas.jpeg",
+            "longitud" :-74.1145274 ,
+            "latitud": 4.6629288
+        },
+        {
+            "nombre":"Tienda No hay",
+            "categoria":"Supermercado",
+            "descripcion":"No hay pero le tengo lo que necesita",
+            "foto":"../../assets/images/Tienda3.jpg",
+            "longitud" : -74.1177938,
+            "latitud": 4.6150932
+        },
+        {
+            "nombre":"Hornitos y pan",
+            "categoria":"Panaderia",
+            "descripcion":"Los mejores pasabocas y delikatessen de la ciudad",
+            "foto":"../../assets/images/Tienda2.jpg",
+            "longitud" : -74.1097647,
+            "latitud": 4.625528
+        },
+        {
+            "nombre":"B2 Supermercado",
+            "categoria":"Supermercado",
+            "descripcion":"Los precios mas bajos y la calidad tambien",
+            "foto":"../../assets/images/Tienda3.jpg",
+            "longitud" : -74.1444789,
+            "latitud": 4.6104366
+        },
+        {
+            "nombre":"Carniceria Julio",
+            "categoria":"Carnes",
+            "descripcion":"Las mejores cortes  del sector",
+            "foto":"../../assets/images/Tienda2.jpg",
+            "longitud" : -74.121908,
+            "latitud": 4.6336241
+        },
+        {
+            "nombre":"Carnes y animales ",
+            "categoria":"Restaurante",
+            "descripcion":"Asadero chino con toda la cultura oriental",
+            "foto":"../../assets/images/Tienda1.jpg",
+            "longitud" : -74.0931561,
+            "latitud":4.6212915 
+        },
+        {
+            "nombre":"Tienda Deportiva",
+            "categoria":"Accesorios",
+            "descripcion":"Variedad de accesorios deportivo",
+            "foto":"../../assets/images/Miscelania1.jpg",
+            "longitud" : -74.1139144,
+            "latitud": 4.6184162
+        },
+        {
+            "nombre":"Comida LLanera",
+            "categoria":"Restaurante",
+            "descripcion":"Carne asada del llano colombia",
+            "foto":"../../assets/images/Miscelania3.jpg",
+            "longitud" : -74.1301578,
+            "latitud": 4.6478454
+        },
+        {
+            "nombre":"Justo y Malo",
+            "categoria":"Supermercado",
+            "descripcion":"Los productos mas raros",
+            "foto":"../../assets/images/Miscelania2.jpg",
+            "longitud" :-74.0790412 ,
+            "latitud": 4.6620118
+        },
+        {
+            "nombre":"Farma ton",
+            "categoria":"Drogueria",
+            "descripcion":"Medicamentos y ",
+            "foto":"../../assets/images/Drogueria1.jpg",
+            "longitud" : -74.0850923,
+            "latitud": 4.6903058
         }
+       
     ]
 }
