@@ -1,0 +1,69 @@
+<mat-toolbar class="menu bg-blue ">
+  <a class="navbar-brand" routerLink="pagprincipal"><img class="" src="../../assets/images/logo.png"
+      alt="logo-pide-cerca"></a>
+  <ul>
+    <div *ngIf="auth.loginOn()" class="navbar-item border rounded border-success text-center">
+      <mat-icon aria-hidden="false" aria-label="event" class="icon">event</mat-icon>
+      <a *ngIf="auth.loginOn()" routerLink="pagprincipal" class="tit">Home</a>
+    </div>
+  </ul>
+  <span class="spacerIcon"></span>
+  <span class="spacer"></span>
+  <ul>
+    <div *ngIf="!auth.loginOn()" class="navbar-item  border rounded border-success text-center">
+      <mat-icon *ngIf="!auth.loginOn()" aria-hidden="false" aria-label="account_circle" class="icon">
+        account_circle</mat-icon>
+      <a *ngIf="!auth.loginOn()" routerLink="login" class="tit">Login</a>
+    </div>
+  </ul>
+  <ul>
+    <div *ngIf="!auth.loginOn()" class="navbar-item border rounded border-success text-center">
+      <mat-icon *ngIf="!auth.loginOn()" aria-hidden="false" aria-label="account_box" class="icon">
+        account_box</mat-icon>
+      <a *ngIf="!auth.loginOn()" routerLink="registro" class="tit">Registro</a>
+    </div>
+  </ul>
+  <ul>
+    <div *ngIf="auth.loginOn()" class="navbar-item border rounded border-success text-center">
+      <mat-icon *ngIf="auth.loginOn()" aria-hidden="false" aria-label="shopping_bag" class="icon">
+        shopping_bag</mat-icon>
+      <a *ngIf="auth.loginOn()" routerLink="tiendas" class="tit">Tiendas</a>
+    </div>
+  </ul>
+  <ul>
+    <div *ngIf="auth.loginOn()" class="navbar-item border rounded border-success text-center">
+      <mat-icon *ngIf="auth.loginOn()" aria-hidden="false" aria-label="shopping_cart" class="icon">
+        shopping_cart</mat-icon>
+      <a *ngIf="auth.loginOn()" routerLink="pedidos" class="tit">Pedidos</a>
+    </div>
+  </ul>
+  <ul>
+    <div *ngIf="auth.loginOn()" class="navbar-item border rounded border-success text-center">
+      <mat-icon *ngIf="auth.loginOn()" aria-hidden="false" aria-label="map" class="icon">
+        map</mat-icon>
+      <a *ngIf="auth.loginOn()" routerLink="mapa" class="tit">Mapa</a>
+    </div>
+  </ul>
+  <ul>
+    <div *ngIf="auth.loginOn()" class="navbar-item border rounded border-success text-center">
+      <mat-icon *ngIf="auth.loginOn()" aria-hidden="false" aria-label="account_circle" class="icon">account_circle
+      </mat-icon>
+      <a *ngIf="auth.loginOn()" routerLink="perfil" data-toggle="modal" data-target="#profileModal"
+        class="tit">Perfil</a>
+    </div>
+  </ul>
+  <ul>
+    <div *ngIf="auth.loginOn()" class="navbar-item mx-3 border rounded border-success text-center">
+      <mat-icon *ngIf="auth.loginOn()" aria-hidden="false" aria-label="settings" class="icon">settings
+      </mat-icon>
+      <a *ngIf="auth.loginOn()" routerLink="editar" data-toggle="modal" data-target="#profileModal"
+        class="tit">Editar</a>
+    </div>
+  </ul>
+  <ul>
+    <div *ngIf="auth.loginOn()" class="navbar-item mx-3 border rounded border-success text-center">
+      <mat-icon *ngIf="auth.loginOn()" aria-hidden="false" aria-label="login" class="icon">login</mat-icon>
+      <a class="tit" *ngIf="auth.loginOn()" mat-button (click)="auth.cerrarSesion()">Cerrar sesion</a>
+    </div>
+  </ul>
+</mat-toolbar>

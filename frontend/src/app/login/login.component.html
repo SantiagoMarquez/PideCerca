@@ -1,0 +1,22 @@
+<div class="vh-100">
+  <div class="form bg-cont" style="margin-top: 80px;">
+    <mat-card class="card">
+      <mat-card-title> Login </mat-card-title>
+      <mat-card-content>
+        <div class="container">
+          <mat-form-field>
+            <input [(ngModel)]="loguear.correo" matInput placeholder="Correo" />
+          </mat-form-field>
+          <mat-form-field>
+            <input type="password" [(ngModel)]="loguear.password" matInput placeholder="Contrasena" />
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button (click)="login()" class="button bg-green titles" mat-raised-button>
+          Login
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

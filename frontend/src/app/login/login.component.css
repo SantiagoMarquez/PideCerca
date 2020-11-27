@@ -1,0 +1,112 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  width: 100%;
+}
+
+.card {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-card-title {
+  text-align: center;
+}
+
+.col {
+  background-color: rgb(53, 51, 51);
+}
+
+/* ///////////// */
+
+/* body {
+  margin: 0;
+  background-color: #e1e4e7;
+}
+
+
+a {
+  text-decoration: none;
+  color: #B8C33B;
+}
+
+.title {
+  font-family: 'Barlow', sans-serif;
+  text-align: center;
+}
+
+.title2 {
+  font-family: 'Montserrat',
+    sans-serif;
+}
+
+.bord {
+  border: 1px solid #B8C33B;
+}
+
+.myform {
+  position: relative;
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  background-color: white;
+  border: 3px solid #B8C33B;
+  border-radius: 1.1rem;
+}
+
+.login-or {
+  position: relative;
+  color: #aaa;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.span-or {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -2px;
+  margin-left: -25px;
+  background-color: #fff;
+  width: 50px;
+  text-align: center;
+}
+
+.hr-or {
+  height: 1px;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.google {
+  color: #666;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  border: 1px solid #B8C33B;
+  border-radius: 50px;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+} */

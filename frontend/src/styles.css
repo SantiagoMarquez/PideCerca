@@ -1,0 +1,92 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --principal: #031D44;
+  --secundario: #FFD51F;
+  --secundario1: #B8C33B;
+  --texto: Roboto;
+}
+
+
+.bg-blue {
+  background-color: var(--principal);
+}
+
+.bg-yellow {
+  background-color: var(--secundario);
+}
+
+.bg-green {
+  background-color: var(--secundario1);
+}
+
+.font-text {
+  font-family: var(--texto);
+}
+
+.color-text {
+  color: white !important;
+}
+
+.color-green {
+  color: var(--secundario1);
+}
+
+.color-blue {
+  color: var(--principal)
+}
+
+.boton {
+  padding: 1em 1.8125em;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  background-color: var(--secundario1);
+  color: var(--principal);
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 5%;
+}
+
+.boton:hover {
+  transform: scale(1.2);
+  font-size: 16px;
+  color: white !important;
+}
+
+
+.colorfondo-bar {
+  background-color: #ffd51f;
+}
+
+.btn-colormenu {
+  background-color: #d29e36;
+  color: #fff;
+}
+
+.titles {
+  font-family: 'Barlow', sans-serif;
+  text-align: center;
+}
+
+.main-color {
+  background-color: #e1e4e7;
+}
+
+.title {
+  font-family: 'Barlow', sans-serif;
+  text-align: center;
+}
+
+.title2 {
+  font-family: 'Montserrat',
+    sans-serif;
+}

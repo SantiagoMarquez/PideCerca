@@ -1,0 +1,38 @@
+<div class="vh-100">
+  <div class="form" style="margin-top: 80px;">
+    <mat-card class="card">
+      <mat-card-title> Editar usuario </mat-card-title>
+      <mat-card-content>
+        <div class="container">
+          <mat-form-field>
+            <input [(ngModel)]="editarUsuario.nombre" matInput placeholder="Nombre" />
+          </mat-form-field>
+          <mat-form-field>
+            <input [(ngModel)]="editarUsuario.cedula" matInput placeholder="Cedula" />
+          </mat-form-field>
+          <mat-form-field>
+            <input [(ngModel)]="editarUsuario.edad" matInput placeholder="Edad" />
+          </mat-form-field>
+          <mat-form-field>
+            <input [(ngModel)]="editarUsuario.telefono" matInput placeholder="Telefono" />
+          </mat-form-field>
+          <mat-form-field>
+            <input [(ngModel)]="editarUsuario.direccion" matInput placeholder="Direccion" />
+          </mat-form-field>
+          <!-- <mat-form-field>
+            <input [(ngModel)]="editarUsuario.password" matInput placeholder="Contrasena" />
+          </mat-form-field> -->
+          <!-- <input type="file" (change)="subirArchivo($event)" /> -->
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button (click)="editar()" class="button bg-green" mat-raised-button>
+          Guardar
+        </button>
+        <!-- <button (click)="crearImg()" class="button bg-green" mat-raised-button>
+          Guardar
+        </button> -->
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
