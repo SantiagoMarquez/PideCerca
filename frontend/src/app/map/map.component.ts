@@ -6,6 +6,7 @@ import {AuthService} from '../service/auth.service';
 import {Router} from '@angular/router';
 
 
+
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
@@ -23,7 +24,7 @@ export class MapComponent implements OnInit, OnDestroy, AfterViewInit {
 
   ngOnInit(): void {
     this.traerUbicacion();
-    this.map = new Leaflet.Map('map').setView([4.62585, -74.14713], 18);
+    this.map = new Leaflet.Map('map').setView([4.62585, -74.14713], 12);
     Leaflet.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 18,
       attribution: 'Map data © OpenStreetMap contributors',
@@ -56,7 +57,17 @@ export class MapComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   leafletMap(): void {
+   
     for (const tienda of this.tiendasList) {
+      const aviso= `<h3 class="text-primary">${tienda.nombre}</h3>` +`` +
+      `<div class="rounded text-danger ">Categoria: ${ tienda.categoria }</div>` +
+      `<div class="text-success">Descripcion: ${ tienda.descripcion}</div>`+
+      `<img style="width:70%; height:80%" src="${tienda.foto}" alt="${tienda.descripcion}">`+`<br><br>`+
+      `<a class="btn btn-outline-success" href="http://localhost:4200/pagprincipal" role="button">Ir a la tienda</a>`
+      
+
+     
+      
       Leaflet.marker([tienda.latitud, tienda.longitud])
         .addTo(this.map)
         .setIcon(
@@ -66,10 +77,7 @@ export class MapComponent implements OnInit, OnDestroy, AfterViewInit {
             iconUrl: '../../assets/images/gorra.svg',
           })
         )
-        .bindPopup(tienda.nombre  +`` +
-        `<div>Categoria: ${ tienda.categoria }</div>` +
-        `<div>Descripcion: ${ tienda.descripcion}</div>`+
-        `<a href="http://localhost:4200/pagprincipal">Ir a la tienda</a>` )
+        .bindPopup(aviso, )
         .openPopup();
     }
   }
