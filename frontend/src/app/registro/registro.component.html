@@ -5,25 +5,25 @@
       <mat-card-content>
         <div class="container">
           <mat-form-field>
-            <input [(ngModel)]="registrarUsuario.nombre" matInput placeholder="Nombre" />
+            <input [(ngModel)]="registrarUsuario.nombre" matInput placeholder="Nombre" required />
           </mat-form-field>
           <mat-form-field>
-            <input [(ngModel)]="registrarUsuario.cedula" matInput placeholder="Cedula" />
+            <input [(ngModel)]="registrarUsuario.cedula" matInput placeholder="Cedula" required />
           </mat-form-field>
           <mat-form-field>
-            <input [(ngModel)]="registrarUsuario.edad" matInput placeholder="Edad" />
+            <input [(ngModel)]="registrarUsuario.edad" matInput placeholder="Edad" required />
           </mat-form-field>
           <mat-form-field>
-            <input [(ngModel)]="registrarUsuario.telefono" matInput placeholder="Telefono" />
+            <input [(ngModel)]="registrarUsuario.telefono" matInput placeholder="Telefono" required />
           </mat-form-field>
           <mat-form-field>
-            <input [(ngModel)]="registrarUsuario.direccion" matInput placeholder="Direccion" />
+            <input [(ngModel)]="registrarUsuario.direccion" matInput placeholder="Direccion" required />
           </mat-form-field>
           <mat-form-field>
-            <input [(ngModel)]="registrarUsuario.correo" matInput placeholder="Correo" />
+            <input [(ngModel)]="registrarUsuario.correo" matInput placeholder="Correo" required />
           </mat-form-field>
           <mat-form-field>
-            <input [(ngModel)]="registrarUsuario.password" matInput placeholder="Contrasena" />
+            <input [(ngModel)]="registrarUsuario.password" matInput placeholder="Contrasena" type="password" required />
           </mat-form-field>
         </div>
       </mat-card-content>

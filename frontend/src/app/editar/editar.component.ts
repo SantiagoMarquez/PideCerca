@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from '../service/auth.service';
 import {Router} from '@angular/router';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-editar',
@@ -53,10 +54,26 @@ export class EditarComponent implements OnInit {
     this.auth.editarUsuario(this.editarUsuario).subscribe(
       (res) =>{
         console.log(res);
+        Swal.fire({
+          title: 'Exito!',
+          text: 'Cambios guardados',
+          icon: 'success',
+          timer:3000,
+          confirmButtonText: 'Continuar'
+        })
         this.router.navigate(['/pagprincipal']);
         // this.router.navigate(['/editar'])
       },
-      (err) => console.log(err)
+      (err) => {
+        console.log(err)
+        Swal.fire({
+          title: 'Error!',
+          text: 'Error',
+          icon: 'error',
+          timer:3000,
+          confirmButtonText: 'Continuar'
+        })
+      }
     )
   }
 }

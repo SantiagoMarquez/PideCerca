@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2'
 
 @Injectable({
   providedIn: 'root'
@@ -44,6 +45,13 @@ export class AuthService {
 
    cerrarSesion(){
      localStorage.removeItem('token');
+     Swal.fire({
+      title: 'Sesion finalizada!',
+      text: 'Vuelve pronto',
+      icon: 'success',
+      timer:2000,
+      confirmButtonText: 'Continuar'
+    })
      this.router.navigate(['/login']);
    }
 }

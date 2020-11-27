@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from '../service/auth.service';
 import {Router} from '@angular/router';
-
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-registro',
@@ -32,10 +32,24 @@ export class RegistroComponent implements OnInit {
     this.auth.registroUsuario(this.registrarUsuario).subscribe(
       (res) => {
         console.log(res);
+        Swal.fire({
+          title: 'Exito!',
+          text: 'Registro exitoso',
+          icon: 'success',
+          timer:3000,
+          confirmButtonText: 'Continuar'
+        })
         this.router.navigate(['/login']);
       },
-      (err) => console.log(err)
-      
+      (err) => {
+        console.log(err)
+        Swal.fire({
+          title: 'Error!',
+          icon: 'error',
+          timer: 3000,
+          confirmButtonText: 'Continuar'
+        })
+      }
     )
   }
 }
