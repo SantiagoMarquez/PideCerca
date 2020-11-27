@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-md-4 p-4" *ngFor="let lista of lista">
+        <div class="card card-photo" (click)="selectedCard(photo._id)">
+            <div class="card-header">
+                {{lista.nombre}}
+            </div>
+            <img class="image center" src="{{lista.sticker}}" alt="">
+            <div class="card-body">
+                <p>{{lista.precio}}</p>
+            </div>
+        </div>
+    </div>
+</div>
