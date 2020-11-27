@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import Swal from 'sweetalert2';
+import { PedidoService } from '../../service/pedido.service';
 import { ProductoService } from '../../service/producto.service';
 @Component({
   selector: 'app-productos',
@@ -9,12 +10,13 @@ import { ProductoService } from '../../service/producto.service';
 })
 export class ProductosComponent implements OnInit {
   constructor(
-    private ProductoService: ProductoService,
+    private productoService: ProductoService,
+    private pedidoService: PedidoService,
     private router: Router
   ) {}
   lista = [];
-  ngOnInit(): void {
-    this.ProductoService.listaProductos().subscribe(
+  obtenerProductos(): void {
+    this.productoService.listaProductos().subscribe(
       (res) => {
         this.lista = res;
       },
@@ -22,5 +24,27 @@ export class ProductosComponent implements OnInit {
         console.log(err);
       }
     );
+  }
+  agregarItemAPedido(id, cantidad): void {
+    let payload = {
+      productId: id,
+      cantidad,
+    };
+    this.pedidoService.addItemToCart(payload).subscribe(
+      (res) => {
+        this.obtenerProductos();
+        Swal.fire({
+          title: 'Producto agregado!',
+          icon: 'success',
+          timer: 2000,
+        });
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+  }
+  ngOnInit(): void {
+    this.obtenerProductos();
   }
 }

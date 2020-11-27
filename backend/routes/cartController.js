@@ -6,6 +6,7 @@ exports.addItemToCart = async (req, res) => {
 	const quantity = Number.parseInt(req.body.cantidad);
 	try {
 		let cart = await cartRepository.cart();
+		console.log("cart",typeof cart)
         let productDetails = await Producto.findById(productId);
 		if (!productDetails) {
 			return res.status(500).json({
@@ -72,7 +73,7 @@ exports.addItemToCart = async (req, res) => {
 			};
 			cart = await cartRepository.addItem(cartData);
 			// let data = await cart.save();
-			res.json(cart);
+			res.status(200).send(cart);
 		}
 	} catch (err) {
 		console.log(err);

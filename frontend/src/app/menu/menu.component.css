@@ -1,5 +1,5 @@
 .spacer {
-  flex: 1 1 auto;
+  flex: 0 0 auto;
 }
 
 .spacerIcon {
@@ -25,5 +25,7 @@ a:hover {
 }
 
 .tit{
-  margin-right: 10px;
+  margin-right: 5px;
 }
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }

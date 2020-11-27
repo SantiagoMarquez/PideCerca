@@ -11,6 +11,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { AuthGuard } from './guard/auth.guard';
 import { EditarComponent } from './editar/editar.component';
+import { PedidosComponent } from './pedido/pedidos/pedidos.component';
 
 const routes: Routes = [
   {
@@ -61,6 +62,11 @@ const routes: Routes = [
   {
     path: 'tiendas/producto',
     component: ProductosComponent,
+  },
+  {
+    path: 'pedidos',
+    component: PedidosComponent,
+    canActivate: [AuthGuard],
   },
 ];
 

@@ -7,8 +7,8 @@
             <img src="../../../assets/images/product.png"  class="img-card-top w-100">
             <div class="card-body">                
                 <p>{{lista.descripcion}}</p>
-                <p>${{lista.precio}}</p>
-                <a href="#" class="btn btn-primary">agregar</a>
+                <p>${{lista.precio}}</p>                
+                <button class="btn btn-md btn-info" (click)="agregarItemAPedido(lista._id, 1)">Agregar al pedido</button>
             </div>
         </div>
     </div>

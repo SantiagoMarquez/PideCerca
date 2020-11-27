@@ -10,7 +10,7 @@ export class PedidoService {
   private pedidoUrl = 'http://localhost:3000/api/pedido';
   private borrarPedidoUrl = 'http://localhost:3000/api/pedido/empty-cart';
 
-  agregarAlPedido(payload) {
+  addItemToCart(payload) {
     return this.http.post<any>(this.pedidoUrl, payload);
   }
   getCartItems() {
